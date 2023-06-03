@@ -48,9 +48,13 @@ const work = () => {
         answerBot.innerHTML = `- ${arrayRandElement()}!`;
         forText.appendChild(answerBot);
 
-        const answerBotTwo = document.createElement('p');
-        answerBotTwo.innerHTML = `- Возвращайтесь, если возникнут вопросы!`;
-        forText.appendChild(answerBotTwo);
+        forText.scrollTo(0, forText.scrollHeight);
+        
+        setTimeout(()=> {
+            const answerBotTwo = document.createElement('p');
+            answerBotTwo.innerHTML = `- Возвращайтесь, если возникнут вопросы!`;
+            forText.appendChild(answerBotTwo);
+        }, 2000)
 
         forText.scrollTo(0, forText.scrollHeight);
 
